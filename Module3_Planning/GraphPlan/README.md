@@ -1,4 +1,4 @@
-# **README.md — Group 11 (Module: GraphPlan Planning)**
+# **README.md — Group 11**
 ### **Module 3: Planning the Next Few Conversation Steps using GraphPlan**
 
 ---
@@ -41,6 +41,7 @@ final_plan.txt
 ## **Author and Contributor**
 Justa Tirkey\
 21CS02011
+
 
 
 
