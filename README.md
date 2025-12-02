@@ -1,6 +1,9 @@
 
 # **README - Group 11**
-
+---
+## **Module 1**
+---
+## **Module 2**
 ---
 ## **Module 3**
 
@@ -74,4 +77,8 @@ python3 pop.py
     * PNG: A flowchart visualization of the conversation strategy.
     * JSON: The data structure containing steps, ordering constraints, and causal links.
 
+---
+## **Module 4**
+---
+## **Module 5**
 ---
