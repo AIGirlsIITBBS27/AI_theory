@@ -5,7 +5,7 @@
 
 ## **Project Overview**
 
-This repository contains implementation of **POP** for Module 3 of Group 11's project:
+This is the implementation of **POP** for Module 3 of Group 11's project:
 ```text
 ├── pop_planner.py             # Main driver, STRIPS operators, and Planner logic
 ├── pop_outputs/               # Auto-generated folder for outputs
