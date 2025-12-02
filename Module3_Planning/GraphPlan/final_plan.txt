@@ -1,0 +1,5 @@
+FINAL PLAN (each time-step):
+t=0: ['Greet', 'NoOp(NotBoostedConfidence)', 'NoOp(NotComforted)', 'NoOp(NotAcknowledged)']
+t=1: ['NoOp(NotComforted)', 'NoOp(NotBoostedConfidence)', 'Acknowledge']
+t=2: ['NoOp(NotBoostedConfidence)', 'Comfort']
+t=3: ['NoOp(Comforted)', 'BoostConfidence']

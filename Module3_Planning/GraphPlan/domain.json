@@ -1,0 +1,135 @@
+{
+  "actions": [
+    {
+      "name": "Greet",
+      "pre": ["NotGreeted"],
+      "post": ["Greeted"]
+    },
+
+    {
+      "name": "Acknowledge",
+      "pre": ["Greeted", "NotAcknowledged"],
+      "post": ["Acknowledged"]
+    },
+
+    {
+      "name": "Comfort",
+      "pre": ["Acknowledged", "NotComforted"],
+      "post": ["Comforted"]
+    },
+
+    {
+      "name": "Probe",
+      "pre": ["Acknowledged", "NotClarified"],
+      "post": ["Clarified"]
+    },
+
+    {
+      "name": "Guide",
+      "pre": ["Clarified", "Acknowledged", "NotGuided"],
+      "post": ["Guided"]
+    },
+
+    {
+      "name": "BoostConfidence",
+      "pre": ["Comforted", "NotBoostedConfidence"],
+      "post": ["BoostedConfidence"]
+    },
+
+    {
+      "name": "BoostConfidenceAfterGuide",
+      "pre": ["Guided", "NotBoostedConfidence"],
+      "post": ["BoostedConfidence"]
+    },
+
+    {
+      "name": "Validate",
+      "pre": ["Acknowledged", "NotValidated"],
+      "post": ["Validated"]
+    },
+
+    {
+      "name": "Support",
+      "pre": ["Acknowledged", "NotSupported"],
+      "post": ["Supported"]
+    },
+
+    {
+      "name": "Reassure",
+      "pre": ["Acknowledged", "NotReassured"],
+      "post": ["Reassured"]
+    },
+
+    {
+      "name": "Encourage",
+      "pre": ["Acknowledged", "NotEncouraged"],
+      "post": ["Encouraged"]
+    },
+
+    {
+      "name": "Motivate",
+      "pre": ["Acknowledged", "NotMotivated"],
+      "post": ["Motivated"]
+    },
+
+    {
+      "name": "Empower",
+      "pre": ["Acknowledged", "NotEmpowered"],
+      "post": ["Empowered"]
+    },
+
+    {
+      "name": "Inspire",
+      "pre": ["Acknowledged", "NotInspired"],
+      "post": ["Inspired"]
+    },
+
+    {
+      "name": "Connect",
+      "pre": ["Acknowledged", "NotConnected"],
+      "post": ["Connected"]
+    },
+
+    {
+      "name": "Accept",
+      "pre": ["Acknowledged", "NotAccepted"],
+      "post": ["Accepted"]
+    },
+
+    {
+      "name": "Listen",
+      "pre": ["Greeted", "NotListened"],
+      "post": ["Listened"]
+    },
+
+    {
+      "name": "Understand",
+      "pre": ["Acknowledged", "NotUnderstood"],
+      "post": ["Understood"]
+    },
+
+    {
+      "name": "Respect",
+      "pre": ["Acknowledged", "NotRespected"],
+      "post": ["Respected"]
+    },
+
+    {
+      "name": "Value",
+      "pre": ["Acknowledged", "NotValued"],
+      "post": ["Valued"]
+    },
+
+    {
+      "name": "Appreciate",
+      "pre": ["Acknowledged", "NotAppreciated"],
+      "post": ["Appreciated"]
+    },
+
+    {
+      "name": "SafeAction",
+      "pre": ["Acknowledged", "NotSafe"],
+      "post": ["Safe"]
+    }
+  ]
+}

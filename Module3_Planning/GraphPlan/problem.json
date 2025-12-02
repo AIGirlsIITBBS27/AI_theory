@@ -1,0 +1,26 @@
+{
+  "initial_state": [
+    "NotGreeted",
+    "NotAcknowledged",
+    "NotComforted",
+    "NotClarified",
+    "NotGuided",
+    "NotBoostedConfidence",
+    "NotValidated",
+    "NotSupported",
+    "NotReassured",
+    "NotEncouraged",
+    "NotMotivated",
+    "NotEmpowered",
+    "NotInspired",
+    "NotConnected",
+    "NotAccepted",
+    "NotListened",
+    "NotUnderstood",
+    "NotRespected",
+    "NotValued",
+    "NotAppreciated",
+    "NotSafe"
+  ],
+  "goal": ["Comforted", "BoostedConfidence"]
+}
