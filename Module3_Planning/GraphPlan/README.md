@@ -5,7 +5,7 @@
 
 ## **Project Overview**
 
-This repository contains implementation of **GraphPlan** for Module 3 of Group 11's project:
+This contains implementation of **GraphPlan** for Module 3 of Group 11's project:
 ```text
 ├── graphplan.py               # Main driver file that runs GraphPlan
 ├── planning_graph.py          # Planning graph construction + mutex logic
@@ -41,6 +41,7 @@ final_plan.txt
 ## **Author and Contributor**
 Justa Tirkey\
 21CS02011
+
 
 
 
