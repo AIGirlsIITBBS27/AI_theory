@@ -9,17 +9,20 @@ The goal is to find use a uniformed search and one informed search to decide the
 Search Algorithm used:
   1.BFS- Uninformed search method
   2.A*- informed search
-                   Start
-   ┌────────────┬─────────────┬──────────────┬───
-   ↓            ↓             ↓              ↓
-Explain      Encourage     AskGuiding     Remind
-Calmly         Hope        Question       Progress
- (1)            (2)           (3)            (4)
+          Start
+            │
+   ┌────────┼────────┬────────┬────────┐
+   │        │        │        │        │
+   ▼        ▼        ▼        ▼        ▼
+Explain   Encourage  AskGuiding   Remind
+Calmly      Hope     Question    Progress
+ (1)        (2)        (3)         (4)
+   │                    │
+   │                    ▼
+   │                RemindProgress
+   │                      │
+   └──────────────► Goal ◄──────────────┘
 
-Extra Edeges:
-1 → 3  
-3 → 4  
-Every strategy → Goal
 
 
 
