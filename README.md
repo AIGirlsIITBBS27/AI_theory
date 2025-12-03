@@ -1,8 +1,48 @@
 
 # **README - Group 11**
 ---
+
 ## **Module 1**
+**Bayesian Network–Based Emotional State Classifier**
+This project implements a **Bayesian Network (BN)** to classify user emotional–cognitive states using four linguistic signals:
+- **neg** (negative sentiment)
+- **hes** (hesitation)
+- **fru** (frustration)
+- **hing** (high-intensity negative cue)
+
+The model predicts four states:
+- **Slightly_Stressed**
+- **Low_Motivation**
+- **Highly_Anxious**
+- **Overthinking**
+## **Dataset Preparation**
+
+Before building the Bayesian model, the original training dataset was downloaded and converted .txt file into a clean train_dataset_for_NN_model.csv.
+   
+**Run command**
+```
+python3 bayes_model.py
+```
+this loads an bn_cpts.json and all_predictions.csv
+  1. **bn_cpts.json** – contains priors + CPTs (Conditional Probability Tables)  
+  2. **all_predictions.csv** – contains the final emotional-state predictions
+
+###  Workflow
+```
+train_dataset_for_NN_model.csv
+↓
+Signal Extraction (preprocess.py)
+↓
+CPT & Prior Calculation (from dataset statistics)
+↓
+bn_cpts.json (Bayesian model knowledge: priors + CPTs)
+↓
+Bayesian Inference (bayes_model.py)
+↓
+all_predictions.csv (final prediction results)
+```
 ---
+
 ## **Module 2**
 **Choosing the Best Reply Strategy using Search Algorithms**
 The goal is to find use a uniformed search and one informed search to decide the next strategy.
