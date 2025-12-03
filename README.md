@@ -206,7 +206,9 @@ The dialogue system is built to seamlessly support Hinglish, combining Hindi and
 ```
 pip install transformers
 pip install torch
-
+```
+```
+python3 llm.py
 ```
 ##  **How the System Works**
 
