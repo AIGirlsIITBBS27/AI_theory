@@ -175,8 +175,12 @@ pip install torch
 3. **LLM Response Generator →** Creates personalized text based on predicted emotional state  
 4. **Output →** Emotion-aware, meaningful Hinglish response
 
-Example:
-**User:** "Bhai, aaj mann nahi lag raha."
-**Output:**
+**Example:**
+
+**User:**  
+"Bhai, aaj mann nahi lag raha."
+
+**Output:**  
 Response → "Lagta hai energy thodi kam hai. Chalo, step by step start karte hain?"
+
               
