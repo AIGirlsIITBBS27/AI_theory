@@ -116,12 +116,13 @@ Inside the notebook:
 5. A test case is executed to check the agent’s final action.
 
 ```
-
 output:
 - Q-table after training.
 - Reward-vs-episode graphs.
 - Final chosen action for a test emotion (e.g., “boredom” or “anger”).
 - Optional: saved file- `qtable.csv`.
+
+
 ---
-## **Module 5**
+### **Module 5**
 ---
