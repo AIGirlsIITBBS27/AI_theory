@@ -79,6 +79,49 @@ python3 pop.py
 
 ---
 ## **Module 4**
+
+# Using RL-Based Emotion Adaptive Tutor
+
+## Module Goal
+The aim of this module is:
+
+> **To train a simple RL agent that learns how to choose better teaching actions depending on the student's emotional state.**
+This makes the tutor more adaptive and personalized.
+
+## Overview
+This is the implementation of the **Reinforcement Learning (Q-Learning)** based emotion-adaptive module for our project.
+```text
+├── RL_FINAL_1.ipynb
+├── q_table.csv # Saved Q-table after training (if generated)
+└── README.md                 
+```
+
+## **How to Run the Code**
+
+### **Prerequisites**
+- Python 3.8+
+- Install required libraries:
+
+### **Run Command**
+pip install numpy matplotlib
+```
+jupyter notebook RL_FINAL_1.ipynb
+```
+
+Inside the notebook:
+1. Emotion states are loaded.
+2. RL environment is created.
+3. Q-learning agent is trained.
+4. Training graphs are generated.
+5. A test case is executed to check the agent’s final action.
+
+```
+
+output:
+- Q-table after training.
+- Reward-vs-episode graphs.
+- Final chosen action for a test emotion (e.g., “boredom” or “anger”).
+- Optional: saved file- `qtable.csv`.
 ---
 ## **Module 5**
 ---
