@@ -117,8 +117,8 @@ This is the implementation of the **Reinforcement Learning (Q-Learning)** based 
 - Install required libraries:
 
 ### **Run Command**
-pip install numpy matplotlib
 ```
+pip install numpy matplotlib
 jupyter notebook RL_FINAL_1.ipynb
 ```
 
@@ -129,14 +129,54 @@ Inside the notebook:
 4. Training graphs are generated.
 5. A test case is executed to check the agent’s final action.
 
-```
 output:
 - Q-table after training.
 - Reward-vs-episode graphs.
 - Final chosen action for a test emotion (e.g., “boredom” or “anger”).
 - Optional: saved file- `qtable.csv`.
+  
+## **Module 5**
+
+# LLM BASED QUESTION ANSWERING
+
+## Module Goal
+To create an intelligent dialogue system that uses a large language model (LLM) to understand and respond based on the user’s emotional state, allowing more personalized and context-aware conversations.
 
 
----
-### **Module 5**
----
+## Overview
+The dialogue system is built to seamlessly support Hinglish, combining Hindi and English in a conversational manner that feels natural to users.
+```
+├── dialogue_system.py
+├── emotion_classifier.py
+├── response_generator.py
+├── config.yaml
+├── requirements.txt
+└── README.md
+```
+
+## **How to Run the Code**
+
+### **Prerequisites**
+
+- Python 3.8+
+- Install required libraries:
+
+### **Run Command**
+
+```
+pip install transformers
+pip install torch
+
+```
+##  **How the System Works**
+
+1. **User Input →** Hinglish sentence  
+2. **Emotion Classifier →** Extracts signals, applies Bayesian model, final refinement using LLM  
+3. **LLM Response Generator →** Creates personalized text based on predicted emotional state  
+4. **Output →** Emotion-aware, meaningful Hinglish response
+
+Example:
+**User:** "Bhai, aaj mann nahi lag raha."
+**Output:**
+Response → "Lagta hai energy thodi kam hai. Chalo, step by step start karte hain?"
+              
