@@ -1,16 +1,12 @@
-
 """
-
 Module 2: Strategy Selection via Search (A*)
 
 by Annesha Guha 25AI06015 MTECH-AI
 """
 
-
 from collections import deque
 from queue import PriorityQueue
 from typing import Dict, List, Tuple, Optional
-
 
 GRAPH: Dict[str, List[str]] = {
     "Start": [
@@ -19,9 +15,9 @@ GRAPH: Dict[str, List[str]] = {
         "AskGuidingQuestion",
         "RemindProgress",
     ],
-    "ExplainCalmlyWithExample": ["Goal"],
+    "ExplainCalmlyWithExample": ["Goal", "AskGuidingQuestion"],
     "EncourageHope": ["Goal"],
-    "AskGuidingQuestion": ["Goal"],
+    "AskGuidingQuestion": ["Goal", "RemindProgress"],
     "RemindProgress": ["Goal"],
     "Goal": []
 }
@@ -74,7 +70,6 @@ def costs_from_top_emotion(top_emotion: str) -> Dict[str, float]:
         "RemindProgress": 2.0,
     })
 
-
 STRATEGY_COSTS = costs_from_top_emotion(detected_emotion)
 
 
@@ -91,18 +86,17 @@ def bfs(graph: Dict[str, List[str]], start: str, goal: str) -> Optional[List[str
                 q.append((nbr, path + [nbr]))
     return None
 
-
 def edge_cost(u: str, v: str) -> float:
-    """
-    Edge costs:
-      - Start -> Strategy: small uniform cost (1.0)
-      - Strategy -> Goal: strategy-specific emotional cost
-      - Others: 0 by default
-    """
+   
+    
     if u == "Start" and v in STRATEGY_COSTS:
         return 1.0
+  
     if v == "Goal" and u in STRATEGY_COSTS:
         return STRATEGY_COSTS[u]
+   
+    if u in STRATEGY_COSTS and v in STRATEGY_COSTS:
+        return 0.5
     return 0.0
 
 def heuristic(n: str) -> float:
@@ -120,7 +114,7 @@ def heuristic(n: str) -> float:
 
 def a_star(graph: Dict[str, List[str]], start: str, goal: str) -> Tuple[Optional[List[str]], Optional[float]]:
     pq: PriorityQueue = PriorityQueue()
-    pq.put((0.0, start, [start], 0.0))  # (f, node, path, g)
+    pq.put((0.0, start, [start], 0.0))  
     visited = set()
 
     while not pq.empty():
@@ -139,6 +133,7 @@ def a_star(graph: Dict[str, List[str]], start: str, goal: str) -> Tuple[Optional
 
     return None, None
 
+
 goal_node = "Goal"
 
 bfs_path = bfs(GRAPH, "Start", goal_node)
@@ -146,7 +141,6 @@ a_star_path, a_star_cost = a_star(GRAPH, "Start", goal_node)
 
 bfs_selected = bfs_path[1] if bfs_path and len(bfs_path) > 1 else None
 a_star_selected = a_star_path[1] if a_star_path and len(a_star_path) > 1 else None
-
 
 print("--------- Module 2: Strategy Selection ---------\n")
 print(f"Emotion probabilities (from BN): {emotion_probs}")
@@ -162,5 +156,5 @@ print(f"  Total path cost: {a_star_cost}")
 print(f"  Selected next strategy: {a_star_selected}\n")
 
 print("Note:")
-print("BFS ignores emotional costs and returns the first available strategy by graph order.")
-print("A* uses emotion-aware costs to choose the most suitable next strategy for the current student.")
+print("BFS ignores emotional costs and follows graph order.")
+print("A* uses emotion-aware costs and the extra strategy-to-strategy links from the sketch.")
